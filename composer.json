@@ -1,0 +1,47 @@
+{
+    "name": "thebachtiarz/laravel-finance-v1",
+    "description": "A Finance Manager for Laravel Project v1",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "thebachtiarz",
+        "finance"
+    ],
+    "support": {
+        "issues": "https://github.com/thebachtiarz/laravel-finance-v1/issues",
+        "source": "https://github.com/thebachtiarz/laravel-finance-v1"
+    },
+    "authors": [
+        {
+            "name": "thebachtiarz",
+            "email": "bachtiarptibinlppnri2417@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.12",
+        "thebachtiarz/laravel-toolkit-v1": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TheBachtiarz\\Finance\\": "src/"
+        },
+        "files": [
+            "helper/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TheBachtiarz\\Finance\\FinanceServiceProvider"
+            ]
+        }
+    },
+    "homepage": "https://github.com/thebachtiarz/laravel-finance-v1",
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
