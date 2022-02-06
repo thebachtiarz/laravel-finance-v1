@@ -4,6 +4,9 @@
 
 -------
 
+### Requires
+- [thebachtiarz/laravel-toolkit-v1](https://github.com/thebachtiarz/laravel-toolkit-v1/)
+
 ### Installation
 - composer config (only if you have access)
 ```bash

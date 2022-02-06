@@ -14,13 +14,17 @@ class FinanceServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $applicationFinanceService = new ApplicationFinanceService;
+
+        $applicationFinanceService->registerConfig();
+
         if ($this->app->runningInConsole()) {
-            $this->commands([]);
+            $this->commands($applicationFinanceService->registerCommands());
         }
     }
 
     /**
-     * boot module toolkit
+     * boot module finance
      *
      * @return void
      */
