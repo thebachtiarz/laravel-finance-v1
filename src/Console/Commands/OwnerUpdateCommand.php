@@ -13,7 +13,7 @@ use TheBachtiarz\Toolkit\Helper\App\Log\ErrorLogTrait;
 
 class OwnerUpdateCommand extends Command
 {
-    use ConfigHelper, ErrorLogTrait;
+    use ErrorLogTrait;
 
     /**
      * The name and signature of the console command.
@@ -112,7 +112,7 @@ class OwnerUpdateCommand extends Command
 
             $this->proposedOwnerCode = $generateOwnerCode['data']['owner_code'];
 
-            $updateConfigFile = self::setConfigName(FinanceSystemInterface::FINANCE_CONFIG_NAME)
+            $updateConfigFile = ConfigHelper::setConfigName(FinanceSystemInterface::FINANCE_CONFIG_NAME)
                 ->updateConfigFile(FinanceSystemInterface::FINANCE_CONFIG_OWNER_CODE_NAME, $this->proposedOwnerCode);
 
             throw_if(!$updateConfigFile, 'Exception', "Failed to update config owner code file");
