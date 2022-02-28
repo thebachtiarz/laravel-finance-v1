@@ -4,10 +4,10 @@
 
 -------
 
-### Requires
+## Requires
 - [thebachtiarz/laravel-toolkit-v1](https://github.com/thebachtiarz/laravel-toolkit-v1/)
 
-### Installation
+## Installation
 - composer config (only if you have access)
 ```bash
 composer config repositories.thebachtiarz/laravel-finance-v1 git git@github.com:thebachtiarz/laravel-finance-v1.git
@@ -15,11 +15,15 @@ composer config repositories.thebachtiarz/laravel-finance-v1 git git@github.com:
 
 - install repository
 ```bash
-composer require thebachtiarz/laravel-finance-v1
+Laravel 9:
+composer require thebachtiarz/laravel-finance-v1:^2.0
+
+Laravel 8:
+composer require thebachtiarz/laravel-finance-v1:^1.0
 ```
 
 -------
-### Feature
+## Feature
 
 > sek males nulis cak :v
 -------
