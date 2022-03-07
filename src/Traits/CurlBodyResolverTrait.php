@@ -27,7 +27,7 @@ trait CurlBodyResolverTrait
         $result = ['status' => false, 'data' => null, 'message' => ''];
 
         try {
-            throw_if(tbfinanceconfig('is_multi_owner') && (!self::$ownerCode), 'Exception', "Owner code required");
+            throw_if(tbfinanceconfig('is_multi_owner') && !self::$ownerCode, 'Exception', "Owner code required");
 
             $ownerCode = tbfinanceconfig('is_multi_owner')
                 ? self::$ownerCode
