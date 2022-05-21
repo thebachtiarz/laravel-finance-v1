@@ -4,11 +4,6 @@ namespace TheBachtiarz\Finance\Interfaces;
 
 interface UrlDomainInterface
 {
-    public const URL_DOMAIN_BASE_AVAILABLE = [
-        true => self::URL_DOMAIN_BASE_SECURE,
-        false => self::URL_DOMAIN_BASE_UNSECURE
-    ];
-
     public const URL_DOMAIN_TRANSACTION_AVAILABLE = [
         self::URL_DOMAIN_OWNER_CREATE_NAME => self::URL_DOMAIN_OWNER_CREATE_PATH,
         self::URL_DOMAIN_OWNER_DETAIL_NAME => self::URL_DOMAIN_OWNER_DETAIL_PATH,
@@ -25,9 +20,6 @@ interface UrlDomainInterface
         self::URL_DOMAIN_BALANCE_LIST_NAME => self::URL_DOMAIN_BALANCE_LIST_PATH,
         self::URL_DOMAIN_BALANCE_DETAIL_NAME => self::URL_DOMAIN_BALANCE_DETAIL_PATH
     ];
-
-    public const URL_DOMAIN_BASE_SECURE = "https://appfinance.thebachtiarz.com";
-    public const URL_DOMAIN_BASE_UNSECURE = "http://appfinance.thebachtiarz.com";
 
     public const URL_DOMAIN_OWNER_CREATE_NAME = "owner-create";
     public const URL_DOMAIN_OWNER_DETAIL_NAME = "owner-detail";

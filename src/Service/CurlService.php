@@ -32,12 +32,12 @@ class CurlService
      * base domain resolver
      *
      * @override
-     * @param boolean $secure
+     * @param boolean $productionMode
      * @return string
      */
-    private static function baseDomainResolver(bool $secure = true): string
+    private static function baseDomainResolver(bool $productionMode = true): string
     {
-        return UrlDomainInterface::URL_DOMAIN_BASE_AVAILABLE[$secure];
+        return $productionMode ? tbfinanceconfig('api_url_production') : tbfinanceconfig('api_url_sandbox');
     }
 
     /**
@@ -48,9 +48,9 @@ class CurlService
      */
     private static function urlResolver(): string
     {
-        $_baseDomain = self::baseDomainResolver(tbsnconfig('secure_url'));
+        $_baseDomain = self::baseDomainResolver(tbfinanceconfig('is_production_mode'));
 
-        $_prefix = tbfinanceconfig('domain_prefix');
+        $_prefix = tbfinanceconfig('api_url_prefix');
 
         $_endPoint = UrlDomainInterface::URL_DOMAIN_TRANSACTION_AVAILABLE[self::$url];
 

@@ -3,23 +3,43 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Secure URL
+    | API URL Production
     |--------------------------------------------------------------------------
     |
-    | Use secure url for finance domain.
+    | API URL Production site.
     |
     */
-    'secure_url' => true,
+    'api_url_production' => "https://appfinance.thebachtiarz.com",
 
     /*
     |--------------------------------------------------------------------------
-    | Finance Url Server Prefix
+    | API URL Sandbox
     |--------------------------------------------------------------------------
     |
-    | Define server url prefix for finance domain.
+    | API URL Sandbox site.
     |
     */
-    'domain_prefix' => "XcVItKlgRst",
+    'api_url_sandbox' => "http://appfinance.test",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Url Prefix
+    |--------------------------------------------------------------------------
+    |
+    | Set url prefix.
+    |
+    */
+    'api_url_prefix' => 'XcVItKlgRst',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Warehouse Mode
+    |--------------------------------------------------------------------------
+    |
+    | Set mode of warehouse project.
+    |
+    */
+    'is_production_mode' => true,
 
     /*
     |--------------------------------------------------------------------------

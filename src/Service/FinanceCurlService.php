@@ -3,12 +3,9 @@
 namespace TheBachtiarz\Finance\Service;
 
 use TheBachtiarz\Finance\Interfaces\{FinanceSystemInterface, UrlDomainInterface};
-use TheBachtiarz\Toolkit\Helper\App\Response\DataResponse;
 
 class FinanceCurlService
 {
-    use DataResponse;
-
     /**
      * create new finance account
      *
