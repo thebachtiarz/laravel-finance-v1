@@ -2,21 +2,19 @@
 
 namespace TheBachtiarz\Finance;
 
-use TheBachtiarz\Finance\Console\Commands\{OwnerCreateCommand, OwnerUpdateCommand};
-
 class ApplicationFinanceService
 {
     /**
-     * list of commands from finance modules
+     * List of commands from finance modules
      */
     public const COMMANDS = [
-        OwnerCreateCommand::class,
-        OwnerUpdateCommand::class
+        \TheBachtiarz\Finance\Console\Commands\OwnerCreateCommand::class,
+        \TheBachtiarz\Finance\Console\Commands\OwnerUpdateCommand::class
     ];
 
     // ? Public Methods
     /**
-     * register config
+     * Register config
      *
      * @return boolean
      */
@@ -31,7 +29,7 @@ class ApplicationFinanceService
     }
 
     /**
-     * register commands
+     * Register commands
      *
      * @return array
      */
@@ -46,7 +44,7 @@ class ApplicationFinanceService
 
     // ? Private Methods
     /**
-     * set configs
+     * Set configs
      *
      * @return void
      */

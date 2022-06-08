@@ -3,7 +3,7 @@
 namespace TheBachtiarz\Finance\Service;
 
 use TheBachtiarz\Finance\Interfaces\{BalanceDataInterface, FinanceSystemInterface, UrlDomainInterface};
-use TheBachtiarz\Finance\Traits\CurlBodyResolverTrait;
+use TheBachtiarz\Finance\Traits\Curl\CurlBodyResolverTrait;
 use TheBachtiarz\Toolkit\Helper\App\Converter\ConverterHelper;
 use TheBachtiarz\Toolkit\Helper\App\Response\DataResponse;
 
@@ -11,9 +11,9 @@ class BalanceCurlService
 {
     use CurlBodyResolverTrait, DataResponse, ConverterHelper;
 
-    // ? Private Methods
+    // ? Public Methods
     /**
-     * create new transaction for finance account
+     * Create new transaction for finance account
      *
      * @param string $purposeCode
      * @param string $financeCode
@@ -50,7 +50,7 @@ class BalanceCurlService
     }
 
     /**
-     * get list latest finance account transaction from each purpose
+     * Get list latest finance account transaction from each purpose
      *
      * @param string $purposeCode
      * @return array
@@ -71,7 +71,7 @@ class BalanceCurlService
     }
 
     /**
-     * get finance account list transaction(s) from purpose
+     * Get finance account list transaction(s) from purpose
      *
      * @param string $purposeCode
      * @param string $financeCode
@@ -104,7 +104,7 @@ class BalanceCurlService
     }
 
     /**
-     * get detail finance account transaction by reference code
+     * Get detail finance account transaction by reference code
      *
      * @param string $referenceCode
      * @return array
@@ -126,7 +126,7 @@ class BalanceCurlService
 
     // ? Private Methods
     /**
-     * mutation type resolver
+     * Mutation type resolver
      *
      * @param string $mutationType
      * @return string
@@ -148,7 +148,7 @@ class BalanceCurlService
     }
 
     /**
-     * credit amount resolver
+     * Credit amount resolver
      *
      * @param string $mutationType
      * @param string $creditAmount
@@ -159,11 +159,11 @@ class BalanceCurlService
     {
         try {
             /**
-             * mutation type -> add
+             * Mutation type -> add
              */
             if ($mutationType === BalanceDataInterface::BALANCE_DATA_MUTATION_TYPE_ADD_CODE) {
                 /**
-                 * check for rule credit amount minimal
+                 * Check for rule credit amount minimal
                  */
                 throw_if(
                     (int) $creditAmount < BalanceDataInterface::BALANCE_DATA_RULE_AMOUNT_SAVE_MINIMAL,
@@ -172,7 +172,7 @@ class BalanceCurlService
                 );
 
                 /**
-                 * check the rule of credit, cannot add more than rule of amount
+                 * Check the rule of credit, cannot add more than rule of amount
                  */
                 throw_if(
                     (int) $creditAmount > BalanceDataInterface::BALANCE_DATA_RULE_AMOUNT_SAVE_MAXIMAL,
@@ -182,11 +182,11 @@ class BalanceCurlService
             }
 
             /**
-             * mutation type -> min
+             * Mutation type -> min
              */
             if ($mutationType === BalanceDataInterface::BALANCE_DATA_MUTATION_TYPE_MIN_CODE) {
                 /**
-                 * check for rule debit amount minimal
+                 * Check for rule debit amount minimal
                  */
                 throw_if(
                     (int) $creditAmount < BalanceDataInterface::BALANCE_DATA_RULE_AMOUNT_TAKE_MINIMAL,
@@ -195,7 +195,7 @@ class BalanceCurlService
                 );
 
                 /**
-                 * check the rule of credit, cannot take more than rule of amount
+                 * Check the rule of credit, cannot take more than rule of amount
                  */
                 throw_if(
                     (int) $creditAmount > BalanceDataInterface::BALANCE_DATA_RULE_AMOUNT_TAKE_MAXIMAL,

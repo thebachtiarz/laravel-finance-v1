@@ -8,7 +8,7 @@ use TheBachtiarz\Finance\Interfaces\FinanceSystemInterface;
 class FinanceServiceProvider extends ServiceProvider
 {
     /**
-     * register module finance
+     * Register module finance
      *
      * @return void
      */
@@ -24,7 +24,7 @@ class FinanceServiceProvider extends ServiceProvider
     }
 
     /**
-     * boot module finance
+     * Boot module finance
      *
      * @return void
      */
@@ -34,6 +34,10 @@ class FinanceServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../config/' . FinanceSystemInterface::FINANCE_CONFIG_NAME . '.php' => config_path(FinanceSystemInterface::FINANCE_CONFIG_NAME . '.php'),
             ], 'thebachtiarz-finance-config');
+
+            $this->publishes([
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
+            ], 'thebachtiarz-finance-migrations');
         }
     }
 }

@@ -59,7 +59,7 @@ class OwnerCreateCommand extends Command
             die;
         }
 
-        $currentOwnerCode = tbfinanceconfig('owner_code');
+        $currentOwnerCode = tbfinanceconfig(FinanceSystemInterface::FINANCE_CONFIG_OWNER_CODE_NAME);
 
         try {
             if (iconv_strlen($currentOwnerCode)) {

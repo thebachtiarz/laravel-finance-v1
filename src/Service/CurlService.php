@@ -13,8 +13,8 @@ class CurlService
     }
 
     /**
-     * process curl post.
-     * with logger.
+     * Process curl post.
+     * With logger.
      *
      * @override
      * @return array
@@ -29,7 +29,7 @@ class CurlService
     }
 
     /**
-     * base domain resolver
+     * Base domain resolver
      *
      * @override
      * @param boolean $productionMode
@@ -41,7 +41,7 @@ class CurlService
     }
 
     /**
-     * url end point resolver
+     * Url end point resolver
      *
      * @override
      * @return string

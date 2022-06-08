@@ -59,7 +59,7 @@ class OwnerUpdateCommand extends Command
             die;
         }
 
-        $currentOwnerCode = tbfinanceconfig('owner_code');
+        $currentOwnerCode = tbfinanceconfig(FinanceSystemInterface::FINANCE_CONFIG_OWNER_CODE_NAME);
 
         try {
             throw_if(!iconv_strlen($currentOwnerCode), 'Exception', "This application has not generated owner code");

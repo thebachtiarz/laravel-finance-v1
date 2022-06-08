@@ -6,8 +6,11 @@ use TheBachtiarz\Finance\Interfaces\{FinanceSystemInterface, UrlDomainInterface}
 
 class FinanceCurlService
 {
+    //
+
+    // ? Public Methods
     /**
-     * create new finance account
+     * Create new finance account
      *
      * @return array
      */
@@ -17,7 +20,7 @@ class FinanceCurlService
     }
 
     /**
-     * get detail finance account
+     * Get detail finance account
      *
      * @param string $financeCode
      * @return array
@@ -32,7 +35,7 @@ class FinanceCurlService
     }
 
     /**
-     * update finance account code
+     * Update finance account code
      *
      * @param string $financeCode
      * @return array

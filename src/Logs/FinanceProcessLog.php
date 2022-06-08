@@ -9,7 +9,7 @@ use TheBachtiarz\Toolkit\Helper\App\Interfaces\LogLevelInterface;
 class FinanceProcessLog
 {
     /**
-     * log level default
+     * Log level default
      *
      * @var string|null
      * @see https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md#5-psrlogloglevel
@@ -17,14 +17,14 @@ class FinanceProcessLog
     private static ?string $level = null;
 
     /**
-     * process result status
+     * Process result status
      *
      * @var boolean
      */
     private static bool $status;
 
     /**
-     * process result message
+     * Process result message
      *
      * @var string
      */
@@ -32,7 +32,7 @@ class FinanceProcessLog
 
     // ? Public Methods
     /**
-     * process log result
+     * Process log result
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class FinanceProcessLog
 
     // ? Private Methods
     /**
-     * log level resolver by process status
+     * Log level resolver by process status
      *
      * @return string
      */

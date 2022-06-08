@@ -3,15 +3,16 @@
 namespace TheBachtiarz\Finance\Service;
 
 use TheBachtiarz\Finance\Interfaces\{FinanceSystemInterface, UrlDomainInterface};
-use TheBachtiarz\Finance\Traits\CurlBodyResolverTrait;
+use TheBachtiarz\Finance\Traits\Curl\CurlBodyResolverTrait;
 use TheBachtiarz\Toolkit\Helper\App\Response\DataResponse;
 
 class PurposeCurlService
 {
     use CurlBodyResolverTrait, DataResponse;
 
+    // ? Public Methods
     /**
-     * create new finance purpose
+     * Create new finance purpose
      *
      * @param string $information
      * @return array
@@ -32,7 +33,7 @@ class PurposeCurlService
     }
 
     /**
-     * list finance purpose(s) owner
+     * List finance purpose(s) owner
      *
      * @return array
      */
@@ -51,7 +52,7 @@ class PurposeCurlService
     }
 
     /**
-     * show detail finance purpose
+     * Show detail finance purpose
      *
      * @param string $purposeCode
      * @return array
@@ -72,7 +73,7 @@ class PurposeCurlService
     }
 
     /**
-     * update finance purpose information
+     * Update finance purpose information
      *
      * @param string $purposeCode
      * @param string $information

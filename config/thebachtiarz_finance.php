@@ -62,4 +62,47 @@ return [
     |
     */
     'owner_code' => "",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Finance Codes Limit Display
+    |--------------------------------------------------------------------------
+    |
+    | Define finance codes to always limit display.
+    |
+    */
+    'always_limit_display' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Finance Transaction Detail Limit Display
+    |--------------------------------------------------------------------------
+    |
+    | Define finance transaction detail limit display.
+    | Available: ['owner_code', 'finance_code', 'purpose_code', 'transaction_reference'];
+    |
+    */
+    'transaction_code_detail_limit' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Finance Account length display
+    |--------------------------------------------------------------------------
+    |
+    | Define finance account length to display.
+    | Leave null if want to full display.
+    |
+    */
+    'finance_account_length' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Finance Account suffix code
+    |--------------------------------------------------------------------------
+    |
+    | Define finance account suffix code for display rest of limit finance account.
+    | Will not appear if 'finance_account_length' == null.
+    |
+    */
+    'finance_account_suffix' => "SECRETCODE",
 ];

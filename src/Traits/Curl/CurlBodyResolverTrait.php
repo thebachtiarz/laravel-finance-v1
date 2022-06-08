@@ -1,6 +1,6 @@
 <?php
 
-namespace TheBachtiarz\Finance\Traits;
+namespace TheBachtiarz\Finance\Traits\Curl;
 
 use TheBachtiarz\Finance\Interfaces\FinanceSystemInterface;
 
@@ -10,7 +10,7 @@ use TheBachtiarz\Finance\Interfaces\FinanceSystemInterface;
 trait CurlBodyResolverTrait
 {
     /**
-     * owner code
+     * Owner code
      *
      * @var ?string
      */
@@ -18,7 +18,7 @@ trait CurlBodyResolverTrait
 
     // ? Private Methods
     /**
-     * resolve owner code for body curl process
+     * Resolve owner code for body curl process
      *
      * @return array
      */

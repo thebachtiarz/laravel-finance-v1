@@ -3,15 +3,16 @@
 namespace TheBachtiarz\Finance\Service;
 
 use TheBachtiarz\Finance\Interfaces\{FinanceSystemInterface, UrlDomainInterface};
-use TheBachtiarz\Finance\Traits\CurlBodyResolverTrait;
+use TheBachtiarz\Finance\Traits\Curl\CurlBodyResolverTrait;
 use TheBachtiarz\Toolkit\Helper\App\Response\DataResponse;
 
 class OwnerCurlService
 {
     use CurlBodyResolverTrait, DataResponse;
 
+    // ? Public Methods
     /**
-     * create new owner finance
+     * Create new owner finance
      *
      * @return array
      */
@@ -21,7 +22,7 @@ class OwnerCurlService
     }
 
     /**
-     * get information about owner finance
+     * Get information about owner finance
      *
      * @return array
      */
@@ -40,7 +41,7 @@ class OwnerCurlService
     }
 
     /**
-     * update owner finance code
+     * Update owner finance code
      *
      * @return array
      */

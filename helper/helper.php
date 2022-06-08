@@ -3,12 +3,12 @@
 use TheBachtiarz\Finance\Interfaces\FinanceSystemInterface;
 
 /**
- * thebachtiarz finance config
+ * TheBachtiarz finance config
  *
  * @param string|null $keyName config key name | null will return all
  * @return mixed
  */
-function tbfinanceconfig(?string $keyName = null)
+function tbfinanceconfig(?string $keyName = null): mixed
 {
     $configName = FinanceSystemInterface::FINANCE_CONFIG_NAME;
 
